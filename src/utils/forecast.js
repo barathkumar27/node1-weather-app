@@ -14,7 +14,7 @@ const forecast = (latitude, longitude, callback)=>{
                 callback(undefined,body.current.condition.text+". it is currently " +body.current.temp_c +" degrees out. there is a "+body.current.precip_mm+"% chance of rain")
                 // console.log(response.body.current.condition.text+". it is currently " +response.body.current.temp_c +" degrees out. there is a "+response.body.current.precip_mm)
             }
-})
+}) 
 }
 
 module.exports = forecast
