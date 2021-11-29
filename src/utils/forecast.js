@@ -11,9 +11,7 @@ const forecast = (latitude, longitude, callback)=>{
                 callback(body.error.message,undefined)
             //  console.log(response.body.error.message)
             } else {
-                console.log(body.current.condition)
-                callback(undefined,body.current.condition.text+". it is currently " +body.current.temp_c +" degrees out. there is a "+body.current.precip_mm+"% chance of rain")
-                // console.log(response.body.current.condition.text+". it is currently " +response.body.current.temp_c +" degrees out. there is a "+response.body.current.precip_mm)
+                callback(undefined,body.current.condition.text+". it is currently " +body.current.temp_c +" degrees out. Today's max temperature is "+body.forecast.forecastday[0].day.mintemp_c +" and low temperatue is "+body.forecast.forecastday[0].day.mintemp_c+", there is a "+body.current.precip_mm+"% chance of rain")
             }
 }) 
 }
